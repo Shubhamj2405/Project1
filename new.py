@@ -1,4 +1,3 @@
-
 import random
 
 def guess_the_number():
@@ -24,6 +23,13 @@ def guess_the_number():
                 break
         except ValueError:
             print("Please enter a valid number.")
+    
+    # Ask if the player wants to play again
+    play_again = input("Do you want to play again? (yes/no): ").strip().lower()
+    if play_again == 'yes':
+        guess_the_number()  # Restart the game
+    else:
+        print("Thanks for playing! Goodbye!")
 
 if __name__ == "__main__":
     guess_the_number()
